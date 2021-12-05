@@ -36,11 +36,9 @@ elevator.convert()
 screen.blit(elevator, (0,0))
 
 # set rectangle: Rect(left, top, width, height)
-door_1_left = pygame.Rect(width, barSize, 0, height)
+door_1 = pygame.Rect(width, barSize, 0, height)
 door_1_x ,door_1_y = (469,603)
-door_1_right = pygame.Rect(width, barSize, 0, height)
-door_1_x_l ,door_1_y_l = (467,603)
-# pygame.draw.rect(screen, color_darkGray, door_1_shadow)
+
 pygame.display.update()
 
 while running:
@@ -50,12 +48,12 @@ while running:
             running = False
    
     # set door
-    if door_1_left.w <= 562:
-        door_1_left.center = (door_1_x, door_1_y)
-        door_1_left.w += del_x
-        
+    if door_1.w <= 562:
+        door_1.center = (door_1_x, door_1_y)
+        door_1.w += del_x
+    
+    # door_1.width = 50
     # Draw
-    pygame.draw.rect(screen, color_white, door_1_left)
-    # pygame.draw.rect(screen, color_white, door_1_right)
+    pygame.draw.rect(screen, color_white, door_1)
     
     pygame.display.update()
