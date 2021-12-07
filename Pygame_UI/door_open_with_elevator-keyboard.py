@@ -2,7 +2,6 @@ import pygame
 from pygame import image
 from pygame.locals import QUIT
 import keyboard
-import scheduling
 width = 800
 height = 746.5
 barSize = 150
@@ -15,6 +14,7 @@ color_lightGray = (200, 200, 200)
 color_darkGray = (100, 100, 100)
 
 running = True
+#Scheduling function
 def input_floor(screen, status):
     floor_x, floor_y = (1050,105)
     font = pygame.font.Font('freesansbold.ttf', 32)
@@ -55,10 +55,6 @@ door_1.center = (door_1_x, door_1_y)
 switch = 'open'
 status = {'o':False, 'c':False, '1':False, '2':True, '3':False, '4':True, '5':False, '6':False, '7':False, '8':False, '9':True, '10':False}
 input_floor(screen, status)
-
-
-
-
 
 while running:
     clock.tick(60) # 30 exe/secs
