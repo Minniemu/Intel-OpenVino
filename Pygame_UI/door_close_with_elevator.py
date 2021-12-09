@@ -31,9 +31,9 @@ dead_font = pygame.font.SysFont(None, 60)
 clock = pygame.time.Clock()
 
 #load image
-elevator = pygame.image.load('image/ele.png')
-elevator.convert()
-screen.blit(elevator, (0,0))
+# elevator = pygame.image.load('ele.png')
+# elevator.convert()
+# screen.blit(elevator, (0,0))
 
 # set rectangle: Rect(left, top, width, height)
 door_1 = pygame.Rect(width, barSize, 562, height)
@@ -42,7 +42,7 @@ door_1.center = (door_1_x, door_1_y)
 
 while running:
     clock.tick(60) # 60 exe/secs
-    screen.blit(elevator, (0,0))
+    # screen.blit(elevator, (0,0))
     for event in pygame.event.get():
         if event.type == QUIT:
             running = False
